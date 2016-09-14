@@ -1,11 +1,7 @@
 
 # Dockup
 
-[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
-
 Docker image to backup your Docker container volumes
-
-Why the name? Docker + Backup = Dockup
 
 # Usage
 
@@ -23,6 +19,8 @@ From executing a `$ docker inspect mysql` we see that this container has two vol
             "/var/lib/mysql": {}
         }
 ```
+
+(Note that simply backing up the files at `/var/lib/mysql` may create inconsistent backups. Instead use a `BEFORE_BACKUP_CMD` as discussed below.)
 
 ## Backup
 Launch `dockup` container with the following flags:
