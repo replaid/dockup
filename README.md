@@ -20,7 +20,7 @@ From executing a `$ docker inspect mysql` we see that this container has two vol
         }
 ```
 
-(Note that simply backing up the files at `/var/lib/mysql` may create inconsistent backups. Instead use a `BEFORE_BACKUP_CMD` as discussed below.)
+(Note that simply backing up the database files at `/var/lib/mysql` may create inconsistent backups. Instead, to back up a database use a `BEFORE_BACKUP_CMD` as discussed below.)
 
 ## Backup
 Launch `dockup` container with the following flags:
