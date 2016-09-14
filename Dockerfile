@@ -1,5 +1,6 @@
-FROM ubuntu:trusty
-MAINTAINER Borja Burgos <borja@tutum.co>, Mia Iversen <mia@chillfox.com
+FROM debian:jessie
+# MAINTAINER Borja Burgos <borja@tutum.co>, Mia Iversen <mia@chillfox.com>
+MAINTAINER Ryan Platte <ryan@burnbush.net>
 
 RUN apt-get update && apt-get install -y python-pip && pip install awscli
 
