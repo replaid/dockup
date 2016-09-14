@@ -2,7 +2,10 @@ FROM debian:jessie
 # MAINTAINER Borja Burgos <borja@tutum.co>, Mia Iversen <mia@chillfox.com>
 MAINTAINER Ryan Platte <ryan@burnbush.net>
 
-RUN apt-get update && apt-get install -y python-pip && pip install awscli
+RUN apt-get update \
+ && apt-get install -y python-pip \
+ && pip install awscli \
+ && pip install https://bitbucket.org/dbenamy/devcron/get/tip.tar.gz
 
 ADD backup.sh /backup.sh
 ADD restore.sh /restore.sh
